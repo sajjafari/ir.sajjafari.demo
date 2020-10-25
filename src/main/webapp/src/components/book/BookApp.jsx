@@ -17,7 +17,7 @@ class BookApp extends Component{
     render() {
         axios.defaults.headers.common['authorization'] = localStorage.getItem('accessToken')
         return(
-            <div className="TodoApp">
+            <div className="BookApp">
                     <Router>
                         <HeaderComponent></HeaderComponent>
                         <Switch>
