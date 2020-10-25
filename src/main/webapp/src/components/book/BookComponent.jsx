@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import moment from 'moment'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import BookDataService from '../../api/book/BookDataService.js'
+import BookDataService from '../../api/BookDataService.js'
 
 class BookComponent extends Component{
 

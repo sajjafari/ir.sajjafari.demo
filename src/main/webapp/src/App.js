@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BookApp from './components/book/BookApp';
+import BookApp from './components/BookApp';
 import './App.css';
 import './bootstrap.css';
 class App extends Component {

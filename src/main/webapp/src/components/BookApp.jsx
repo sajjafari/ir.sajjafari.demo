@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
-import HeaderComponent from './HeaderComponent.jsx'
-import AuthenticatedRoute from './AuthenticatedRoute.jsx'
-import LoginComponent from './LoginComponent.jsx'
-import ErrorComponent from './ErrorComponent.jsx'
-import ListBooksComponent from './ListBooksComponent.jsx'
-import FooterComponent from './FooterComponent.jsx'
-import WelcomeComponent from './WelcomeComponent.jsx'
-import LogoutComponent from './LogoutComponent.jsx'
-import BookCompoenent from './BookComponent.jsx'
-import WelcomeRoute from './WelcomeRoute.jsx'
+import HeaderComponent from './common/HeaderComponent.jsx'
+import AuthenticatedRoute from './auth/AuthenticatedRoute.jsx'
+import LoginComponent from './auth/LoginComponent.jsx'
+import ErrorComponent from './common/ErrorComponent.jsx'
+import ListBooksComponent from './book/ListBooksComponent.jsx'
+import FooterComponent from './common/FooterComponent.jsx'
+import WelcomeComponent from './common/WelcomeComponent.jsx'
+import LogoutComponent from './auth/LogoutComponent.jsx'
+import BookCompoenent from './book/BookComponent.jsx'
+import WelcomeRoute from './common/WelcomeRoute.jsx'
 import axios from "axios";
 
 

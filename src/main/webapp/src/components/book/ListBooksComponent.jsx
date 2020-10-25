@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import BookDataService from "../../api/book/BookDataService";
+import BookDataService from "../../api/BookDataService";
 import moment from 'moment'
-import axios from "axios";
 
 class ListBooksComponent extends Component{
     constructor(props) {
