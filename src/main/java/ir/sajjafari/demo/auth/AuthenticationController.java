@@ -1,6 +1,7 @@
 package ir.sajjafari.demo.auth;
 
-import ir.sajjafari.demo.entities.JwtAuthenticationResponse;
+import ir.sajjafari.demo.auth.model.JwtAuthenticationResponse;
+import ir.sajjafari.demo.auth.model.LoginRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/auth")
 @CrossOrigin(origins="http://localhost:3000")
-public class BasicAuthenticationController {
+public class AuthenticationController {
 
     @Autowired
     AuthenticationManager authenticationManager;

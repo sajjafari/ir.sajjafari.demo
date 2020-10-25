@@ -1,6 +1,6 @@
 package ir.sajjafari.demo.rest.sample.book;
 
-import ir.sajjafari.demo.dao.BookDao;
+import ir.sajjafari.demo.dao.BookRepository;
 import ir.sajjafari.demo.entities.BookEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +15,7 @@ import java.util.List;
 public class BookController {
 
 	@Autowired
-	private BookDao bookDao;
+	private BookRepository bookDao;
 
 	@GetMapping(path = "/loadAll")
 	public List<BookEntity> loadAll() {

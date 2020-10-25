@@ -1,6 +1,7 @@
 package ir.sajjafari.demo.auth;
 
 import io.jsonwebtoken.*;
+import ir.sajjafari.demo.auth.model.UserPrincipal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,9 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-/**
- * Created by rajeevkumarsingh on 19/08/17.
- */
+
 @Component
 public class JwtTokenProvider {
 

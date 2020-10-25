@@ -1,7 +1,7 @@
-package ir.sajjafari.demo.service;
+package ir.sajjafari.demo.auth.service;
 
 
-import ir.sajjafari.demo.auth.UserPrincipal;
+import ir.sajjafari.demo.auth.model.UserPrincipal;
 import ir.sajjafari.demo.dao.UserRepository;
 import ir.sajjafari.demo.entities.UserEntity;
 import ir.sajjafari.demo.exception.ResourceNotFoundException;
@@ -12,9 +12,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * Created by rajeevkumarsingh on 02/08/17.
- */
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

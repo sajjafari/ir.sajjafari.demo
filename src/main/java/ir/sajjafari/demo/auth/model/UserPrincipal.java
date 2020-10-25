@@ -1,4 +1,4 @@
-package ir.sajjafari.demo.auth;
+package ir.sajjafari.demo.auth.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import ir.sajjafari.demo.entities.UserEntity;

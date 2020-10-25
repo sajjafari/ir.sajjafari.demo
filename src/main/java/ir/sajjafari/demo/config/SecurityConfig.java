@@ -2,7 +2,7 @@ package ir.sajjafari.demo.config;
 
 import ir.sajjafari.demo.auth.JwtAuthenticationEntryPoint;
 import ir.sajjafari.demo.auth.JwtAuthenticationFilter;
-import ir.sajjafari.demo.service.CustomUserDetailsService;
+import ir.sajjafari.demo.auth.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package ir.sajjafari.demo.entities;
+package ir.sajjafari.demo.auth.model;
 
 /**
  * Created by rajeevkumarsingh on 19/08/17.

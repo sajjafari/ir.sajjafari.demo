@@ -1,4 +1,4 @@
-package ir.sajjafari.demo.auth;
+package ir.sajjafari.demo.auth.model;
 
 import lombok.Getter;
 import lombok.Setter;

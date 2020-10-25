@@ -1,6 +1,6 @@
 package ir.sajjafari.demo.auth;
 
-import ir.sajjafari.demo.service.CustomUserDetailsService;
+import ir.sajjafari.demo.auth.service.CustomUserDetailsService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
