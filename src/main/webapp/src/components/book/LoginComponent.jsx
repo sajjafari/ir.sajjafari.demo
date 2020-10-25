@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import AuthenticationService from './AuthenticationService.js'
-import axios from 'axios'
 
 class LoginComponent extends Component{
 
@@ -22,10 +21,8 @@ class LoginComponent extends Component{
             <div>
                 <h1>Login</h1>
                 <div className="container">
-                    {/*<ShowInvalidCredentials hasLoginFailed={this.state.hasLoginFailed}/>*/}
                     {this.state.hasLoginFailed && <div className="alert alert-warning">Invalid Credentials</div>}
                     {this.state.showSuccessMessage && <div>Login Sucessful</div>}
-                    {/*<ShowLoginSuccessMessage showSuccessMessage={this.state.showSuccessMessage}/>*/}
                     <div className="form-group">
                         <input  className="form-control max-margin-bottom" type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="Username"/>
                     </div>
@@ -50,28 +47,16 @@ class LoginComponent extends Component{
     }
 
     loginClicked() {
-        // if(this.state.username==='in28minutes' && this.state.password==='dummy'){
-        //     AuthenticationService.registerSuccessfulLogin(this.state.username,this.state.password);
-        //     this.props.history.push(`/welcome/${this.state.username}`)
-        //     // this.setState({showSuccessMessage:true})
-        //     // this.setState({hasLoginFailed:false})
-        // }
-        // else {
-        //     this.setState({showSuccessMessage:false})
-        //     this.setState({hasLoginFailed:true})
-        // }
 
         let loginRequest = {
             username: this.state.username,
             password: this.state.password
         }
 
-
-
         AuthenticationService
         .executeBasicAuthenticationService(loginRequest)
             .then(response => {
-                AuthenticationService.registerSuccessfulLogin(this.state.username, this.state.password)
+                AuthenticationService.registerSuccessfulLogin(this.state.username, response.data.accessToken)
                 this.props.history.push(`/welcome/${this.state.username}`)
             }).catch(error => {
                 this.setState({showSuccessMessage:false})

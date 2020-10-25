@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import HeaderComponent from './HeaderComponent.jsx'
 import AuthenticatedRoute from './AuthenticatedRoute.jsx'
@@ -10,15 +10,12 @@ import WelcomeComponent from './WelcomeComponent.jsx'
 import LogoutComponent from './LogoutComponent.jsx'
 import BookCompoenent from './BookComponent.jsx'
 import WelcomeRoute from './WelcomeRoute.jsx'
-import AuthenticationService from './AuthenticationService.js'
 import axios from "axios";
-
-
 
 
 class BookApp extends Component{
     render() {
-        axios.defaults.headers.common['authorization'] = localStorage.getItem('basicToken')
+        axios.defaults.headers.common['authorization'] = localStorage.getItem('accessToken')
         return(
             <div className="TodoApp">
                     <Router>

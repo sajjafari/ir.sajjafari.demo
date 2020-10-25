@@ -1,16 +1,20 @@
 import axios from 'axios'
 
 class AuthenticationService{
-    registerSuccessfulLogin(username, password) {
+    registerSuccessfulLogin(username, accessToken) {
         localStorage.setItem('authenticatedUser', username);
-        localStorage.setItem('basicToken', this.createBasicAuthToken(username, password));
-        this.setupAxiosInterceptors(this.createBasicAuthToken(username, password))
+        localStorage.setItem('accessToken', this.createJWTToken(accessToken));
+        this.setupAxiosInterceptors(this.createJWTToken(accessToken))
+    }
+
+    createJWTToken(token) {
+        return 'Bearer ' + token
     }
 
     logout() {
         localStorage.removeItem('authenticatedUser')
+        localStorage.removeItem('accessToken')
         localStorage.removeItem('basicToken')
-        //return axios.get("http://localhost:8080/logout");
     }
 
     isUserLoggedIn() {
@@ -20,8 +24,7 @@ class AuthenticationService{
     }
 
     executeBasicAuthenticationService(loginRequest) {
-        return axios.post("http://localhost:8080/api/auth/basicauth",loginRequest,
-            { headers: { authorization: this.createBasicAuthToken(loginRequest.username, loginRequest.password) } })
+        return axios.post("http://localhost:8080/api/auth/basicauth",loginRequest)
     }
 
 
